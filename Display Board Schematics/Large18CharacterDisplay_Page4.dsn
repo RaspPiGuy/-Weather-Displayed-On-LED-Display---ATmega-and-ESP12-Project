@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This file was written by TinyCAD Version 2.80.06 Build #626 Production Release
+If you wish to view this file go to http://tinycad.sourceforge.net to
+download the executable.-->
+<TinyCADSheets>
+	<TinyCAD>
+		<NAME>Sheet 1</NAME>
+		<DETAILS>
+			<Size width='1355' height='1015'/>
+			<GUIDES horiz='7' vert='5'/>
+			<TITLE>Large 18 Character Display</TITLE>
+			<AUTHOR>MJL - thepiandi.blogspot.com</AUTHOR>
+			<REVISION>1.0</REVISION>
+			<DOCNUMBER></DOCNUMBER>
+			<ORGANISATION></ORGANISATION>
+			<SHEETS>4 of 6</SHEETS>
+			<SHOWS>3</SHOWS>
+			<DATE>September 9, 2015</DATE>
+			<GRID spacing='50.00000' snap='1'/>
+		</DETAILS>
+		<FONT id='1'>
+			<HEIGHT>-10</HEIGHT>
+			<WIDTH>0</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='3'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='4'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='5'>
+			<HEIGHT>-24</HEIGHT>
+			<WIDTH>11</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='6'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<STYLE id='2'>
+			<STYLE>0</STYLE>
+			<COLOR>000000</COLOR>
+			<THICKNESS>1</THICKNESS>
+		</STYLE>
+		<FILL id='0'>
+			<INDEX>-1</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<FILL id='1'>
+			<INDEX>0</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<FILL id='2'>
+			<INDEX>0</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<SYMBOLDEF id='1'>
+			<NAME type='0'>MTAN4120-AO</NAME>
+			<REF type='0'>DS?</REF>
+			<DESCRIPTION>MTAN4120-AO</DESCRIPTION>
+			<PPP>1</PPP>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>package name for PCB layout</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='133.00000,114.00000'/>
+			<TinyCAD>
+				<POLYGON pos='104.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,63.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,64.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,66.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,63.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,64.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,63.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,64.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,63.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,64.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,63.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,64.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,69.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,69.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,70.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,72.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,69.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,69.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,70.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,69.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,69.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,70.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,69.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,69.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,70.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,69.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,69.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,70.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,75.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,75.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,76.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,78.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,75.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,75.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,76.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,75.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,75.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,76.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,75.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,75.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,76.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,75.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,75.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,76.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,81.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,81.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,82.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,84.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,81.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,81.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,82.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,81.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,81.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,82.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,81.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,81.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,82.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,81.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,81.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,82.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,87.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,87.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,88.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,90.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,87.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,87.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,88.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,87.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,87.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,88.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,87.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,87.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,88.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,87.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,87.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,88.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,93.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,93.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,94.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,96.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,93.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,93.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,94.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,93.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,93.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,94.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,93.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,93.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,94.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,93.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,93.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,94.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,99.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='104.00000,99.00000' style='2' fill='1'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='105.00000,100.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='101.00000,102.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='30.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,99.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,99.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='111.00000,100.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,99.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,99.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='117.00000,100.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,99.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,99.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='123.00000,100.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,99.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='3.00000,3.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,99.00000' style='2' fill='2'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+					<POINT pos='2.00000,2.00000' arc='0'/>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='129.00000,100.00000' style='2' fill='0'>
+					<POINT pos='0.00000,2.00000' arc='0'/>
+					<POINT pos='2.00000,0.00000' arc='0'/>
+				</POLYGON>
+				<PIN pos='93.00000,66.00000' which='0' elec='0' direction='3' part='0' number='9' show='3' length='20' number_pos='0' centre_name='0'>R1</PIN>
+				<PIN pos='93.00000,72.00000' which='0' elec='0' direction='3' part='0' number='14' show='3' length='20' number_pos='0' centre_name='0'>R2</PIN>
+				<PIN pos='93.00000,78.00000' which='0' elec='0' direction='3' part='0' number='8' show='3' length='20' number_pos='0' centre_name='0'>R3</PIN>
+				<PIN pos='93.00000,84.00000' which='0' elec='0' direction='3' part='0' number='5,12' show='3' length='20' number_pos='0' centre_name='0'>R4</PIN>
+				<PIN pos='93.00000,90.00000' which='0' elec='0' direction='3' part='0' number='1' show='3' length='20' number_pos='0' centre_name='0'>R5</PIN>
+				<PIN pos='93.00000,96.00000' which='0' elec='0' direction='3' part='0' number='7' show='3' length='20' number_pos='0' centre_name='0'>R6</PIN>
+				<PIN pos='93.00000,102.00000' which='0' elec='0' direction='3' part='0' number='2' show='3' length='20' number_pos='0' centre_name='0'>R7</PIN>
+				<PIN pos='104.00000,114.00000' which='0' elec='0' direction='0' part='0' number='13' show='3' length='20' number_pos='0' centre_name='0'>C1</PIN>
+				<PIN pos='110.00000,114.00000' which='0' elec='0' direction='0' part='0' number='3' show='3' length='20' number_pos='0' centre_name='0'>C2</PIN>
+				<PIN pos='116.00000,114.00000' which='0' elec='0' direction='0' part='0' number='4,11' show='3' length='20' number_pos='0' centre_name='0'>C3</PIN>
+				<PIN pos='122.00000,114.00000' which='0' elec='0' direction='0' part='0' number='10' show='3' length='20' number_pos='0' centre_name='0'>C4</PIN>
+				<PIN pos='128.00000,114.00000' which='0' elec='0' direction='0' part='0' number='6' show='3' length='20' number_pos='0' centre_name='0'>C5</PIN>
+				<RECTANGLE a='97.00000,61.00000' b='133.00000,110.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,62.00000' b='108.00000,67.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,62.00000' b='114.00000,67.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,62.00000' b='120.00000,67.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,62.00000' b='126.00000,67.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,62.00000' b='132.00000,67.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,68.00000' b='108.00000,73.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,68.00000' b='114.00000,73.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,68.00000' b='120.00000,73.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,68.00000' b='126.00000,73.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,68.00000' b='132.00000,73.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,74.00000' b='108.00000,79.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,74.00000' b='114.00000,79.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,74.00000' b='120.00000,79.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,74.00000' b='126.00000,79.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,74.00000' b='132.00000,79.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,80.00000' b='108.00000,85.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,80.00000' b='114.00000,85.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,80.00000' b='120.00000,85.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,80.00000' b='126.00000,85.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,80.00000' b='132.00000,85.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,86.00000' b='108.00000,91.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,86.00000' b='114.00000,91.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,86.00000' b='120.00000,91.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,86.00000' b='126.00000,91.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,86.00000' b='132.00000,91.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,92.00000' b='108.00000,97.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,92.00000' b='114.00000,97.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,92.00000' b='120.00000,97.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,92.00000' b='126.00000,97.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,92.00000' b='132.00000,97.00000' style='2' fill='0'/>
+				<ELLIPSE a='103.00000,98.00000' b='108.00000,103.00000' style='2' fill='0'/>
+				<ELLIPSE a='109.00000,98.00000' b='114.00000,103.00000' style='2' fill='0'/>
+				<ELLIPSE a='115.00000,98.00000' b='120.00000,103.00000' style='2' fill='0'/>
+				<ELLIPSE a='121.00000,98.00000' b='126.00000,103.00000' style='2' fill='0'/>
+				<ELLIPSE a='127.00000,98.00000' b='132.00000,103.00000' style='2' fill='0'/>
+				<POLYGON pos='104.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,42.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='110.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,42.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='116.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,42.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='122.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,42.00000' arc='0'/>
+				</POLYGON>
+				<POLYGON pos='128.00000,63.00000' style='2' fill='0'>
+					<POINT pos='0.00000,0.00000' arc='0'/>
+					<POINT pos='0.00000,42.00000' arc='0'/>
+				</POLYGON>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<OPTIONS>
+			<GRID>1</GRID>
+			<UNITS>1</UNITS>
+			<COLOR_WIRE>FF0000</COLOR_WIRE>
+			<COLOR_BUS>0000FF</COLOR_BUS>
+			<COLOR_JUNCTION>000000</COLOR_JUNCTION>
+			<COLOR_NOCONNECT>000000</COLOR_NOCONNECT>
+			<COLOR_LABEL>208000</COLOR_LABEL>
+			<COLOR_POWER>000000</COLOR_POWER>
+			<COLOR_PIN>4040C0</COLOR_PIN>
+			<COLOR_HIDDEN_PIN>208020</COLOR_HIDDEN_PIN>
+			<COLOR_BACKGROUND>FFFFFF</COLOR_BACKGROUND>
+			<COLOR_NOTETEXT_FILL>AFFFFF</COLOR_NOTETEXT_FILL>
+			<COLOR_NOTETEXT_LINE>FF0000</COLOR_NOTETEXT_LINE>
+			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
+		</OPTIONS>
+		<BUS a='15.00000,11.00000' b='203.00000,11.00000'/>
+		<BUS a='60.00000,88.00000' b='263.00000,88.00000'/>
+		<WIRE a='56.00000,26.00000' b='46.00000,26.00000'/>
+		<BUSSLASH pos='46.00000,26.00000' direction='1'/>
+		<LABEL pos='48.00000,26.00000' direction='3' font='4' color='208000' style='0'>R1_1</LABEL>
+		<WIRE a='56.00000,32.00000' b='46.00000,32.00000'/>
+		<BUSSLASH pos='46.00000,32.00000' direction='1'/>
+		<LABEL pos='48.00000,32.00000' direction='3' font='4' color='208000' style='0'>R1_2</LABEL>
+		<WIRE a='56.00000,38.00000' b='46.00000,38.00000'/>
+		<BUSSLASH pos='46.00000,38.00000' direction='1'/>
+		<LABEL pos='48.00000,38.00000' direction='3' font='4' color='208000' style='0'>R1_3</LABEL>
+		<WIRE a='56.00000,44.00000' b='46.00000,44.00000'/>
+		<BUSSLASH pos='46.00000,44.00000' direction='1'/>
+		<LABEL pos='48.00000,44.00000' direction='3' font='4' color='208000' style='0'>R1_4</LABEL>
+		<WIRE a='56.00000,50.00000' b='46.00000,50.00000'/>
+		<BUSSLASH pos='46.00000,50.00000' direction='1'/>
+		<LABEL pos='48.00000,50.00000' direction='3' font='4' color='208000' style='0'>R1_5</LABEL>
+		<WIRE a='56.00000,56.00000' b='46.00000,56.00000'/>
+		<BUSSLASH pos='46.00000,56.00000' direction='1'/>
+		<LABEL pos='48.00000,56.00000' direction='3' font='4' color='208000' style='0'>R1_6</LABEL>
+		<WIRE a='56.00000,62.00000' b='46.00000,62.00000'/>
+		<BUSSLASH pos='46.00000,62.00000' direction='1'/>
+		<LABEL pos='48.00000,62.00000' direction='3' font='4' color='208000' style='0'>R1_7</LABEL>
+		<WIRE a='135.00000,27.00000' b='125.00000,27.00000'/>
+		<BUSSLASH pos='125.00000,27.00000' direction='1'/>
+		<LABEL pos='127.00000,27.00000' direction='3' font='4' color='208000' style='0'>R1_1</LABEL>
+		<WIRE a='135.00000,33.00000' b='125.00000,33.00000'/>
+		<BUSSLASH pos='125.00000,33.00000' direction='1'/>
+		<LABEL pos='127.00000,33.00000' direction='3' font='4' color='208000' style='0'>R1_2</LABEL>
+		<WIRE a='135.00000,39.00000' b='125.00000,39.00000'/>
+		<BUSSLASH pos='125.00000,39.00000' direction='1'/>
+		<LABEL pos='127.00000,39.00000' direction='3' font='4' color='208000' style='0'>R1_3</LABEL>
+		<WIRE a='135.00000,45.00000' b='125.00000,45.00000'/>
+		<BUSSLASH pos='125.00000,45.00000' direction='1'/>
+		<LABEL pos='127.00000,45.00000' direction='3' font='4' color='208000' style='0'>R1_4</LABEL>
+		<WIRE a='135.00000,51.00000' b='125.00000,51.00000'/>
+		<BUSSLASH pos='125.00000,51.00000' direction='1'/>
+		<LABEL pos='127.00000,51.00000' direction='3' font='4' color='208000' style='0'>R1_5</LABEL>
+		<WIRE a='135.00000,57.00000' b='125.00000,57.00000'/>
+		<BUSSLASH pos='125.00000,57.00000' direction='1'/>
+		<LABEL pos='127.00000,57.00000' direction='3' font='4' color='208000' style='0'>R1_6</LABEL>
+		<WIRE a='135.00000,63.00000' b='125.00000,63.00000'/>
+		<BUSSLASH pos='125.00000,63.00000' direction='1'/>
+		<LABEL pos='127.00000,63.00000' direction='3' font='4' color='208000' style='0'>R1_7</LABEL>
+		<WIRE a='217.00000,26.00000' b='207.00000,26.00000'/>
+		<BUSSLASH pos='207.00000,26.00000' direction='1'/>
+		<LABEL pos='209.00000,26.00000' direction='3' font='4' color='208000' style='0'>R1_1</LABEL>
+		<WIRE a='217.00000,32.00000' b='207.00000,32.00000'/>
+		<BUSSLASH pos='207.00000,32.00000' direction='1'/>
+		<LABEL pos='209.00000,32.00000' direction='3' font='4' color='208000' style='0'>R1_2</LABEL>
+		<WIRE a='217.00000,38.00000' b='207.00000,38.00000'/>
+		<BUSSLASH pos='207.00000,38.00000' direction='1'/>
+		<LABEL pos='209.00000,38.00000' direction='3' font='4' color='208000' style='0'>R1_3</LABEL>
+		<WIRE a='217.00000,44.00000' b='207.00000,44.00000'/>
+		<BUSSLASH pos='207.00000,44.00000' direction='1'/>
+		<LABEL pos='209.00000,44.00000' direction='3' font='4' color='208000' style='0'>R1_4</LABEL>
+		<WIRE a='217.00000,50.00000' b='207.00000,50.00000'/>
+		<BUSSLASH pos='207.00000,50.00000' direction='1'/>
+		<LABEL pos='209.00000,50.00000' direction='3' font='4' color='208000' style='0'>R1_5</LABEL>
+		<WIRE a='217.00000,56.00000' b='207.00000,56.00000'/>
+		<BUSSLASH pos='207.00000,56.00000' direction='1'/>
+		<LABEL pos='209.00000,56.00000' direction='3' font='4' color='208000' style='0'>R1_6</LABEL>
+		<WIRE a='217.00000,62.00000' b='207.00000,62.00000'/>
+		<BUSSLASH pos='207.00000,62.00000' direction='1'/>
+		<LABEL pos='209.00000,62.00000' direction='3' font='4' color='208000' style='0'>R1_7</LABEL>
+		<WIRE a='56.00000,102.00000' b='46.00000,102.00000'/>
+		<BUSSLASH pos='46.00000,102.00000' direction='1'/>
+		<LABEL pos='48.00000,102.00000' direction='3' font='4' color='208000' style='0'>R2_1</LABEL>
+		<WIRE a='56.00000,108.00000' b='46.00000,108.00000'/>
+		<BUSSLASH pos='46.00000,108.00000' direction='1'/>
+		<LABEL pos='48.00000,108.00000' direction='3' font='4' color='208000' style='0'>R2_2</LABEL>
+		<WIRE a='56.00000,114.00000' b='46.00000,114.00000'/>
+		<BUSSLASH pos='46.00000,114.00000' direction='1'/>
+		<LABEL pos='48.00000,114.00000' direction='3' font='4' color='208000' style='0'>R2_3</LABEL>
+		<WIRE a='56.00000,120.00000' b='46.00000,120.00000'/>
+		<BUSSLASH pos='46.00000,120.00000' direction='1'/>
+		<LABEL pos='48.00000,120.00000' direction='3' font='4' color='208000' style='0'>R2_4</LABEL>
+		<WIRE a='56.00000,126.00000' b='46.00000,126.00000'/>
+		<BUSSLASH pos='46.00000,126.00000' direction='1'/>
+		<LABEL pos='48.00000,126.00000' direction='3' font='4' color='208000' style='0'>R2_5</LABEL>
+		<WIRE a='56.00000,132.00000' b='46.00000,132.00000'/>
+		<BUSSLASH pos='46.00000,132.00000' direction='1'/>
+		<LABEL pos='48.00000,132.00000' direction='3' font='4' color='208000' style='0'>R2_6</LABEL>
+		<WIRE a='56.00000,138.00000' b='46.00000,138.00000'/>
+		<BUSSLASH pos='46.00000,138.00000' direction='1'/>
+		<LABEL pos='48.00000,138.00000' direction='3' font='4' color='208000' style='0'>R2_7</LABEL>
+		<WIRE a='135.00000,103.00000' b='125.00000,103.00000'/>
+		<BUSSLASH pos='125.00000,103.00000' direction='1'/>
+		<LABEL pos='127.00000,103.00000' direction='3' font='4' color='208000' style='0'>R2_1</LABEL>
+		<WIRE a='135.00000,109.00000' b='125.00000,109.00000'/>
+		<BUSSLASH pos='125.00000,109.00000' direction='1'/>
+		<LABEL pos='127.00000,109.00000' direction='3' font='4' color='208000' style='0'>R2_2</LABEL>
+		<WIRE a='135.00000,115.00000' b='125.00000,115.00000'/>
+		<BUSSLASH pos='125.00000,115.00000' direction='1'/>
+		<LABEL pos='127.00000,115.00000' direction='3' font='4' color='208000' style='0'>R2_3</LABEL>
+		<WIRE a='135.00000,121.00000' b='125.00000,121.00000'/>
+		<BUSSLASH pos='125.00000,121.00000' direction='1'/>
+		<LABEL pos='127.00000,121.00000' direction='3' font='4' color='208000' style='0'>R2_4</LABEL>
+		<WIRE a='135.00000,127.00000' b='125.00000,127.00000'/>
+		<BUSSLASH pos='125.00000,127.00000' direction='1'/>
+		<LABEL pos='127.00000,127.00000' direction='3' font='4' color='208000' style='0'>R2_5</LABEL>
+		<WIRE a='135.00000,133.00000' b='125.00000,133.00000'/>
+		<BUSSLASH pos='125.00000,133.00000' direction='1'/>
+		<LABEL pos='127.00000,133.00000' direction='3' font='4' color='208000' style='0'>R2_6</LABEL>
+		<WIRE a='135.00000,139.00000' b='125.00000,139.00000'/>
+		<BUSSLASH pos='125.00000,139.00000' direction='1'/>
+		<LABEL pos='127.00000,139.00000' direction='3' font='4' color='208000' style='0'>R2_7</LABEL>
+		<WIRE a='217.00000,103.00000' b='207.00000,103.00000'/>
+		<BUSSLASH pos='207.00000,103.00000' direction='1'/>
+		<LABEL pos='209.00000,103.00000' direction='3' font='4' color='208000' style='0'>R2_1</LABEL>
+		<WIRE a='217.00000,109.00000' b='207.00000,109.00000'/>
+		<BUSSLASH pos='207.00000,109.00000' direction='1'/>
+		<LABEL pos='209.00000,109.00000' direction='3' font='4' color='208000' style='0'>R2_2</LABEL>
+		<WIRE a='217.00000,115.00000' b='207.00000,115.00000'/>
+		<BUSSLASH pos='207.00000,115.00000' direction='1'/>
+		<LABEL pos='209.00000,115.00000' direction='3' font='4' color='208000' style='0'>R2_3</LABEL>
+		<WIRE a='217.00000,121.00000' b='207.00000,121.00000'/>
+		<BUSSLASH pos='207.00000,121.00000' direction='1'/>
+		<LABEL pos='209.00000,121.00000' direction='3' font='4' color='208000' style='0'>R2_4</LABEL>
+		<WIRE a='217.00000,127.00000' b='207.00000,127.00000'/>
+		<BUSSLASH pos='207.00000,127.00000' direction='1'/>
+		<LABEL pos='209.00000,127.00000' direction='3' font='4' color='208000' style='0'>R2_5</LABEL>
+		<WIRE a='217.00000,133.00000' b='207.00000,133.00000'/>
+		<BUSSLASH pos='207.00000,133.00000' direction='1'/>
+		<LABEL pos='209.00000,133.00000' direction='3' font='4' color='208000' style='0'>R2_6</LABEL>
+		<WIRE a='217.00000,139.00000' b='207.00000,139.00000'/>
+		<BUSSLASH pos='207.00000,139.00000' direction='1'/>
+		<LABEL pos='209.00000,139.00000' direction='3' font='4' color='208000' style='0'>R2_7</LABEL>
+		<WIRE a='67.00000,74.00000' b='67.00000,84.00000'/>
+		<BUSSLASH pos='67.00000,84.00000' direction='0'/>
+		<LABEL pos='67.00000,83.00000' direction='0' font='4' color='208000' style='0'>C1_1</LABEL>
+		<WIRE a='73.00000,74.00000' b='73.00000,84.00000'/>
+		<BUSSLASH pos='73.00000,84.00000' direction='0'/>
+		<LABEL pos='73.00000,83.00000' direction='0' font='4' color='208000' style='0'>C1_2</LABEL>
+		<WIRE a='79.00000,74.00000' b='79.00000,84.00000'/>
+		<BUSSLASH pos='79.00000,84.00000' direction='0'/>
+		<LABEL pos='79.00000,83.00000' direction='0' font='4' color='208000' style='0'>C1_3</LABEL>
+		<WIRE a='85.00000,74.00000' b='85.00000,84.00000'/>
+		<BUSSLASH pos='85.00000,84.00000' direction='0'/>
+		<LABEL pos='85.00000,83.00000' direction='0' font='4' color='208000' style='0'>C1_4</LABEL>
+		<WIRE a='91.00000,74.00000' b='91.00000,84.00000'/>
+		<BUSSLASH pos='91.00000,84.00000' direction='0'/>
+		<LABEL pos='91.00000,83.00000' direction='0' font='4' color='208000' style='0'>C1_5</LABEL>
+		<WIRE a='67.00000,150.00000' b='67.00000,160.00000'/>
+		<BUSSLASH pos='67.00000,160.00000' direction='0'/>
+		<LABEL pos='67.00000,159.00000' direction='0' font='4' color='208000' style='0'>C1_1</LABEL>
+		<WIRE a='73.00000,150.00000' b='73.00000,160.00000'/>
+		<BUSSLASH pos='73.00000,160.00000' direction='0'/>
+		<LABEL pos='73.00000,159.00000' direction='0' font='4' color='208000' style='0'>C1_2</LABEL>
+		<WIRE a='79.00000,150.00000' b='79.00000,160.00000'/>
+		<BUSSLASH pos='79.00000,160.00000' direction='0'/>
+		<LABEL pos='79.00000,159.00000' direction='0' font='4' color='208000' style='0'>C1_3</LABEL>
+		<WIRE a='85.00000,150.00000' b='85.00000,160.00000'/>
+		<BUSSLASH pos='85.00000,160.00000' direction='0'/>
+		<LABEL pos='85.00000,159.00000' direction='0' font='4' color='208000' style='0'>C1_4</LABEL>
+		<WIRE a='91.00000,150.00000' b='91.00000,160.00000'/>
+		<BUSSLASH pos='91.00000,160.00000' direction='0'/>
+		<LABEL pos='91.00000,159.00000' direction='0' font='4' color='208000' style='0'>C1_5</LABEL>
+		<WIRE a='146.00000,74.00000' b='146.00000,84.00000'/>
+		<BUSSLASH pos='146.00000,84.00000' direction='0'/>
+		<LABEL pos='146.00000,83.00000' direction='0' font='4' color='208000' style='0'>C2_1</LABEL>
+		<WIRE a='152.00000,74.00000' b='152.00000,84.00000'/>
+		<BUSSLASH pos='152.00000,84.00000' direction='0'/>
+		<LABEL pos='152.00000,83.00000' direction='0' font='4' color='208000' style='0'>C2_2</LABEL>
+		<WIRE a='158.00000,74.00000' b='158.00000,84.00000'/>
+		<BUSSLASH pos='158.00000,84.00000' direction='0'/>
+		<LABEL pos='158.00000,83.00000' direction='0' font='4' color='208000' style='0'>C2_3</LABEL>
+		<WIRE a='164.00000,74.00000' b='164.00000,84.00000'/>
+		<BUSSLASH pos='164.00000,84.00000' direction='0'/>
+		<LABEL pos='164.00000,83.00000' direction='0' font='4' color='208000' style='0'>C2_4</LABEL>
+		<WIRE a='170.00000,74.00000' b='170.00000,84.00000'/>
+		<BUSSLASH pos='170.00000,84.00000' direction='0'/>
+		<LABEL pos='170.00000,83.00000' direction='0' font='4' color='208000' style='0'>C2_5</LABEL>
+		<SYMBOL id='1' pos='96.00000,74.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS1' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-36.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<SYMBOL id='1' pos='175.00000,75.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS2' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-36.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<SYMBOL id='1' pos='257.00000,74.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS3' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-36.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<SYMBOL id='1' pos='96.00000,150.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS4' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-36.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<SYMBOL id='1' pos='175.00000,151.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS5' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-35.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<SYMBOL id='1' pos='257.00000,151.00000' part='0' rotate='0' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='0' description='Ref' value='DS6' show='1' pos='-5.00000,-53.60000'/>
+			<FIELD type='0' description='Name' value='MTAN4120-AO' show='1' pos='-36.00000,-54.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-46.20000'/>
+		</SYMBOL>
+		<WIRE a='228.00000,74.00000' b='228.00000,84.00000'/>
+		<BUSSLASH pos='228.00000,84.00000' direction='0'/>
+		<LABEL pos='228.00000,83.00000' direction='0' font='4' color='208000' style='0'>C3_1</LABEL>
+		<WIRE a='234.00000,74.00000' b='234.00000,84.00000'/>
+		<BUSSLASH pos='234.00000,84.00000' direction='0'/>
+		<LABEL pos='234.00000,83.00000' direction='0' font='4' color='208000' style='0'>C3_2</LABEL>
+		<WIRE a='240.00000,74.00000' b='240.00000,84.00000'/>
+		<BUSSLASH pos='240.00000,84.00000' direction='0'/>
+		<LABEL pos='240.00000,83.00000' direction='0' font='4' color='208000' style='0'>C3_3</LABEL>
+		<WIRE a='246.00000,74.00000' b='246.00000,84.00000'/>
+		<BUSSLASH pos='246.00000,84.00000' direction='0'/>
+		<LABEL pos='246.00000,83.00000' direction='0' font='4' color='208000' style='0'>C3_4</LABEL>
+		<WIRE a='252.00000,74.00000' b='252.00000,84.00000'/>
+		<BUSSLASH pos='252.00000,84.00000' direction='0'/>
+		<LABEL pos='252.00000,83.00000' direction='0' font='4' color='208000' style='0'>C3_5</LABEL>
+		<WIRE a='228.00000,150.00000' b='228.00000,160.00000'/>
+		<BUSSLASH pos='228.00000,160.00000' direction='0'/>
+		<LABEL pos='228.00000,159.00000' direction='0' font='4' color='208000' style='0'>C3_1</LABEL>
+		<WIRE a='234.00000,150.00000' b='234.00000,160.00000'/>
+		<BUSSLASH pos='234.00000,160.00000' direction='0'/>
+		<LABEL pos='234.00000,159.00000' direction='0' font='4' color='208000' style='0'>C3_2</LABEL>
+		<WIRE a='240.00000,150.00000' b='240.00000,160.00000'/>
+		<BUSSLASH pos='240.00000,160.00000' direction='0'/>
+		<LABEL pos='240.00000,159.00000' direction='0' font='4' color='208000' style='0'>C3_3</LABEL>
+		<WIRE a='246.00000,150.00000' b='246.00000,160.00000'/>
+		<BUSSLASH pos='246.00000,160.00000' direction='0'/>
+		<LABEL pos='246.00000,159.00000' direction='0' font='4' color='208000' style='0'>C3_4</LABEL>
+		<WIRE a='252.00000,150.00000' b='252.00000,160.00000'/>
+		<BUSSLASH pos='252.00000,160.00000' direction='0'/>
+		<LABEL pos='252.00000,159.00000' direction='0' font='4' color='208000' style='0'>C3_5</LABEL>
+		<BUS a='121.00000,11.00000' b='121.00000,140.00000'/>
+		<BUS a='203.00000,11.00000' b='203.00000,139.00000'/>
+		<BUS a='42.00000,11.00000' b='42.00000,140.00000'/>
+		<JUNCTION pos='42.00000,11.00000'/>
+		<JUNCTION pos='121.00000,11.00000'/>
+		<BUS a='15.00000,164.00000' b='248.00000,164.00000'/>
+		<BUS a='263.00000,89.00000' b='263.00000,164.00000'/>
+		<BUS a='263.00000,164.00000' b='248.00000,164.00000'/>
+		<BUSNAME pos='15.00000,11.00000' direction='3' font='4' color='208000'>ROWS_Out</BUSNAME>
+		<BUSNAME pos='15.00000,164.00000' direction='3' font='4' color='208000'>COLUMNS</BUSNAME>
+		<WIRE a='146.00000,150.00000' b='146.00000,160.00000'/>
+		<BUSSLASH pos='146.00000,160.00000' direction='0'/>
+		<LABEL pos='146.00000,159.00000' direction='0' font='4' color='208000' style='0'>C2_1</LABEL>
+		<WIRE a='152.00000,150.00000' b='152.00000,160.00000'/>
+		<BUSSLASH pos='152.00000,160.00000' direction='0'/>
+		<LABEL pos='152.00000,159.00000' direction='0' font='4' color='208000' style='0'>C2_2</LABEL>
+		<WIRE a='158.00000,150.00000' b='158.00000,160.00000'/>
+		<BUSSLASH pos='158.00000,160.00000' direction='0'/>
+		<LABEL pos='158.00000,159.00000' direction='0' font='4' color='208000' style='0'>C2_3</LABEL>
+		<WIRE a='164.00000,150.00000' b='164.00000,160.00000'/>
+		<BUSSLASH pos='164.00000,160.00000' direction='0'/>
+		<LABEL pos='164.00000,159.00000' direction='0' font='4' color='208000' style='0'>C2_4</LABEL>
+		<WIRE a='170.00000,150.00000' b='170.00000,160.00000'/>
+		<BUSSLASH pos='170.00000,160.00000' direction='0'/>
+		<LABEL pos='170.00000,159.00000' direction='0' font='4' color='208000' style='0'>C2_5</LABEL>
+		<TEXT pos='121.00000,184.00000' direction='3' font='5' color='000000'>Displays 0 - 5</TEXT>
+		<TEXT pos='29.00000,15.00000' direction='3' font='6' color='000000'>42</TEXT>
+		<TEXT pos='28.00000,168.00000' direction='3' font='6' color='000000'>15</TEXT>
+		<TEXT pos='10.00000,169.00000' direction='3' font='6' color='000000'>To Page 2</TEXT>
+		<TEXT pos='10.00000,16.00000' direction='3' font='6' color='000000'>To Page 3</TEXT>
+		<TEXT pos='51.00000,75.00000' direction='3' font='3' color='000000'>Display 0</TEXT>
+		<TEXT pos='129.00000,75.00000' direction='3' font='3' color='000000'>Display 1</TEXT>
+		<TEXT pos='210.00000,75.00000' direction='3' font='3' color='000000'>Display 2</TEXT>
+		<TEXT pos='49.00000,151.00000' direction='3' font='3' color='000000'>Display 3</TEXT>
+		<TEXT pos='128.00000,152.00000' direction='3' font='3' color='000000'>Display 4</TEXT>
+		<TEXT pos='210.00000,152.00000' direction='3' font='3' color='000000'>Display 5</TEXT>
+	</TinyCAD>
+</TinyCADSheets>
