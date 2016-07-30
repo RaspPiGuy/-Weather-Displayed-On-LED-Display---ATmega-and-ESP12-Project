@@ -15,6 +15,8 @@
  * 
  * Revision 3: 07/22/2016
  *  Turns on red LED
+ *  Old IP address for Weather Underground did not work found new ip address
+ *    at http://api.wunderground.com.ipaddress.com/
  */
 
 #include <ESP8266WiFi.h>
@@ -23,7 +25,8 @@
 const char* ssid     = "Your Router";
 const char* password = "Your Password";
 
-const char* host = "23.203.214.89";  //weather underground API IP address
+//const char* host = "23.203.214.89";  //weather underground API IP address
+const char* host = "184.84.236.83";  //weather underground API IP address
 const int httpPort = 80;
 
 String myKey = "Get Your Own Key";
