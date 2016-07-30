@@ -287,7 +287,7 @@ void getForecast(){
   if (dataFromHost.indexOf("HTTP/1.1 200 OK") != -1){
     //Serial.print(dataFromHost);
 
-    // Get Current Conditions   
+    // Get Forecasts--------------------*/   
     period_1 = parseDataFromHost("title\":", 8,  "\"");
     forecast_1 = parseDataFromHost("fcttext\":", 10, "\"");
     period_2 = parseDataFromHost("title\":", 8,  "\"");
