@@ -1,4 +1,4 @@
-/* ESP_toATmega_ForDisplay_V1R3.ino
+/* ESP_toATmega_ForDisplay_V1R5.ino
  *  
  * thepiandi@blogspot.com  MJL
  * 
@@ -15,16 +15,23 @@
  * 
  * Revision 3: 07/22/2016
  *  Turns on red LED
- *  In "host" replaced ip address with host name 
+ *  In "host", replaced ip address with host name 
+ *  
+ * Revision 4: 08/03/2016
+ *  Trimemd time text from .JSON file to eliminate "EDT" or "EST"
+ *  
+ * Revosopm 5: 08/08/2016
+ *  Rewrote "sendIt" function to avoid hangup if ATmega does not respond
+ *  Turned off red LED
  */
 
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
 const char* ssid     = "Your Router";
-const char* password = "Your Password";
+const char* password = Your Password";
 
-const char* host = "api.wunderground.com";
+const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
 String myKey = "Get Your Own Key";
@@ -53,6 +60,9 @@ volatile boolean interruptFoundOnSCK;
 
 float barametricPressure = 0.00;
 String pressureTrend = "ND";
+
+unsigned long startTime;
+
 
 /* -------------------- the two ISR routines -----------------------*/
 void ISO_SS(){
@@ -93,81 +103,103 @@ void transmitData(String transmitData){
 // low, then for eight clock pulses from listener.  MISO is altered
 // according to the data when SS goes low and when SCK goes low
 
+// If all the bytes are not sent within 9.5 minutes, the we exit
+// this prevents a hangup if the ATmega328P does not respond to the
+// interrupt
+
 void sendIt(char* dataToSend, int byteCount){
   int i;
   byte dataOut;
   int bitCount;
-  boolean done;
-  unsigned long startTime;
+
+  //startTime was intiialized in loop()
   
   for (i = 0; i < byteCount; i++){
-//    startTime = millis();
-    done = false;
     dataOut = byte(dataToSend[i]);            
+    delay(0);
+    
+    // ********  LOOK FOR SS TO GO LOW
     attachInterrupt(signalSS, ISO_SS, FALLING);
-    do{
-      delay(0);
-      // ********  LOOK FOR SS TO GO LOW
+    while(1){
       if(interruptFoundOnSS){       //SS is LOW if true
         interruptFoundOnSS = false;
         detachInterrupt(signalSS);
-        attachInterrupt(signalSS, ISO_SS, RISING);
         
-        //send the first bit
+        //send the first bit, the MSB of the byte
         if (dataOut > 127){
           digitalWrite(signalMISO, HIGH);
         }
         else{
           digitalWrite(signalMISO, LOW);
-       }
-        dataOut <<= 1;
-        
-        // ********   LOOK FOR SS TO GO HIGH AND SCK HIGH
-        bitCount = 0;
-        attachInterrupt(signalSCK, ISO_SCK, RISING);
-        while(1){
-          if(interruptFoundOnSS){       //SS is HIGH exit to next character
-            interruptFoundOnSS = false;
-            detachInterrupt(signalSS);
-            detachInterrupt(signalSCK);
-            done = true;
-            break;
-          }          
-          if(interruptFoundOnSCK){       //SCK is HIGH do nothing here
-            interruptFoundOnSCK = false;
-            detachInterrupt(signalSCK);
-            attachInterrupt(signalSCK, ISO_SCK, FALLING);
-            
-            // ********   LOOK FOR SS TO GO HIGH AND SCK LOW
-            while(1){
-              if(interruptFoundOnSCK){     //SCK is LOW
-                interruptFoundOnSCK = false;
-                detachInterrupt(signalSCK);
-                attachInterrupt(signalSCK, ISO_SCK, RISING);
-
-                //Send a bit
-                if (bitCount++ < 7){
-                  if (dataOut > 127){
-                    digitalWrite(signalMISO, HIGH);
-                 }
-                  else{
-                    digitalWrite(signalMISO, LOW);
-                  }
-                  dataOut = dataOut<< 1;
-                }
-                //attachInterrupt(signalSCK, ISO_SCK, RISING);
-                break;          
-              }
-              delay(0);  //delay looking for SCK to go LOW
-            }
-          }
-          delay(0);  //delay looking for SCK to go HIGH and SS to go HIGH            
         }
+        dataOut <<= 1;   //rotate left to get the next bit
+        break;
+      }
+      else if((millis() - startTime) > 570000){
+        detachInterrupt(signalSS);
+        return;
       }
       delay(0);  //delay looking for SS to go LOW
-    }while (!done);
-    digitalWrite(signalMISO, LOW);
-  }     
+    }
+
+    // Send the next seven bits
+    for (bitCount = 1; bitCount < 8; bitCount++){
+
+      // ********   LOOK FOR SCK TO GO HIGH
+      attachInterrupt(signalSCK, ISO_SCK, RISING);
+      while(1){
+        if(interruptFoundOnSCK){       //SCK is HIGH it true, do nothing here
+          interruptFoundOnSCK = false;
+          detachInterrupt(signalSCK);
+          break;
+        }
+        else if ((millis() - startTime) > 570000){
+          detachInterrupt(signalSCK);
+          return;
+        }
+        delay(0);  //delay looking for SCK to go HIGH
+      }
+      
+      // ********   LOOK FOR SCK TO GO LOW
+      attachInterrupt(signalSCK, ISO_SCK, FALLING);
+      while(1){
+        if(interruptFoundOnSCK){     //SCK is LOW if true, send a bit
+          interruptFoundOnSCK = false;
+          detachInterrupt(signalSCK);
+          
+          //Send the next bit
+          if (dataOut > 127){
+              digitalWrite(signalMISO, HIGH);
+          }
+          else{
+            digitalWrite(signalMISO, LOW);
+          }
+          dataOut = dataOut<< 1;
+          break;          
+        }
+        else if ((millis() - startTime) > 570000){
+          detachInterrupt(signalSCK);
+          return;
+        }            
+        delay(0);  //delay looking for SCK to go LOW
+      }          
+    }
+    
+    // ********   LOOK FOR SS TO GO HIGH TO END DATA TRANSFER OF ONE BYTE
+    attachInterrupt(signalSS, ISO_SS, RISING);
+    while(1){
+      if(interruptFoundOnSS){       //SS is HIGH exit to next character
+        interruptFoundOnSS = false;
+        detachInterrupt(signalSS);
+        break;
+      }          
+      else if ((millis() - startTime) > 570000){
+        detachInterrupt(signalSS);
+        return;
+      }
+      delay(0);  //delay looking for SS to go HIGH
+    }
+  }                    
 }
 /* --------------------getCurrentConditions --------------------*/
 void getCurrentConditions(){
@@ -185,7 +217,7 @@ void getCurrentConditions(){
     return;  // return if connection fails
   }
   
-  // Prepare HTTP request get current conditions from Brial Chapel or Morehead
+  // Prepare HTTP request get current conditions from weather station
   String uri = "http://api.wunderground.com/api/" + myKey + "/conditions/q/pws:" + station + ".json";
   String getString = "GET " + uri + " HTTP/1.1\r\nConnection: close\r\n\r\n";
 
@@ -201,7 +233,7 @@ void getCurrentConditions(){
 
   if (dataFromHost.indexOf("HTTP/1.1 200 OK") != -1){  
     // Get date and time
-    measTime = parseDataFromHost("Last Updated on", 16, "\"");
+    measTime = parseDataFromHost("Last Updated on", 16, " E");
 
     // Get Current Conditions   
     weather = parseDataFromHost("weather\":", 10,  "\"");
@@ -337,7 +369,7 @@ void setup() {
   interruptFoundOnSCK = false;
 
   digitalWrite(signalMISO, LOW);
-  digitalWrite(led, LOW);
+  digitalWrite(led, HIGH);
 
   delay(10);
   WiFi.mode(WIFI_STA);  //declare station mode
@@ -353,8 +385,6 @@ void setup() {
 }
 /*_________________________________loop______________________________*/
 void loop() {
-  unsigned long startTime;
-  
   delay(10000);
  
   startTime = millis();
