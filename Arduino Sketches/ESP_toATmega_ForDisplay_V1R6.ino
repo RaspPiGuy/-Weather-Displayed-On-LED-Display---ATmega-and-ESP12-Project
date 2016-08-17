@@ -1,4 +1,4 @@
-/* ESP_toATmega_ForDisplay_V1R5.ino
+/* ESP_toATmega_ForDisplay_V1R6.ino
  *  
  * thepiandi@blogspot.com  MJL
  * 
@@ -20,21 +20,24 @@
  * Revision 4: 08/03/2016
  *  Trimemd time text from .JSON file to eliminate "EDT" or "EST"
  *  
- * Revosopm 5: 08/08/2016
+ * Revision 5: 08/08/2016
  *  Rewrote "sendIt" function to avoid hangup if ATmega does not respond
  *  Turned off red LED
+ *  
+ *  Revision 6: 08/16/2016
+ *    Added "Feels Like" temperature
  */
 
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
 const char* ssid     = "Your Router";
-const char* password = Your Password";
+const char* password = "Router Password";
 
 const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
-String myKey = "Get Your Own Key";
+String myKey = "Your Weather Underground Key";
 //String station = "KNCCHAPE70"; // Chapel Hill, Morehead
 //String station = "KNCCHAPE18"; // Briar Chapel
 String station = "KNCPITTS5"; // Sortova Farm
@@ -46,7 +49,7 @@ WiFiClient client;  //make an instance of WiFiClient
 
 String dataFromHost;
  
-String temperature, weather, relativeHumidity, wind, pressure, measTime, precipitation;
+String temperature, weather, relativeHumidity, wind, pressure, measTime, precipitation, feelslike;
 String forecast_1, forecast_2, forecast_3, forecast_4, forecast_5, forecast_6, forecast_7, forecast_8;
 String period_1, period_2, period_3, period_4, period_5, period_6, period_7, period_8;
 
@@ -212,6 +215,7 @@ void getCurrentConditions(){
     relativeHumidity = "Could Not Connect";
     wind = "Could Not Connect";
     pressure = "Could Not Connect";
+    feelslike = "Could Not Connect";
     precipitation = "Could Not Connect";        
     
     return;  // return if connection fails
@@ -241,6 +245,7 @@ void getCurrentConditions(){
     relativeHumidity = parseDataFromHost("relative_humidity\":", 20, "\"");
     wind = parseDataFromHost("wind_string\":", 14, "\"");
     pressure = parseDataFromHost("pressure_in\":", 14, "\"");
+    feelslike = parseDataFromHost("feelslike_f\":", 14, "\"");
     precipitation = parseDataFromHost("precip_today_in\":", 18, "\""); 
 
     float pres = pressure.toFloat();
@@ -269,6 +274,7 @@ void getCurrentConditions(){
     relativeHumidity = "Host is offline";
     wind = "Host is offline";
     pressure = "Host is offline";
+    feelslike = "Host is offline";
     precipitation = "Host is offline";  
         
     return;  //return if no data from host
@@ -402,6 +408,7 @@ void loop() {
   transmitData(measTime);
   transmitData(weather);
   transmitData(temperature);
+  transmitData(feelslike);
   transmitData(relativeHumidity);
   transmitData(wind);
   transmitData(pressure);

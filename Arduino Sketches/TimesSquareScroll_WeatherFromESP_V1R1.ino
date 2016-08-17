@@ -1,4 +1,4 @@
-/*  TimesSquareScroll_WeatherFromESP_PartialForecast_V1R1.ino
+/*  TimesSquareScroll_WeatherFromESP_V1R1.ino
  *   
  * thepiandi@blogspot.com  MJL 
  * 
@@ -12,8 +12,8 @@
  * Data that is displayed is the current weather and weather forcase from Weather
  * Underground.
  * 
- * Weather conditions and forcase is captured by ESP12 Development Module every 10 minutes.
- * Via a pseudo SPI where ATmega is the master and ESP12 is the slave, data is sent
+ * Weather conditions and forcast are captured by ESP12 Development Module every 10 minutes.
+ * Via a pseudo SPI, where ATmega is the master and ESP12 is the slave, data is sent
  * from the ESP12 to the ATmega.  ATmega stores the weather data in message slot 29 in
  * the Serial EEPROM.  This is done by real SPI.  ATmega as master and Serial EEPROM as slave.
  * 
@@ -21,13 +21,23 @@
  * 
  * Implements a pseudo SPI master to connect to the ESP12
  * 
- * Developed from UNO_fromESP sketch used with Arduino and ESP12 Interface Board
- * There were pinout changes made between the two hardware versions
  * 
- *  This sketch displays Current conditions and forcast for today only
+ * This sketch evolved from:
+ *    TimesSquareScroll_WeatherFromESP_PartialForecast_V1R2.ino
+ *      and
+ *    TimesSquareScroll_WeatherFromESP_CompleteForecast_V1R2.ino
+ *  and combines the two into one sketch.
+ *  
+ *  If variable "allForecasts" is true, sketch displays Current conditions and 
+ *  forcasts for today, tonight, and six more (three days and three nights).
+ *  If variable "allForecasts" is false, sketch displays current conditions and
+ *  forecast for today only.  Comment out one of the two choices,
+ *  
+ * Also added Heat Index as "Feels Like" temperature  
  * 
  * Versision 1: 
- * Revision 1:  07/22/16
+ *  Revision 1:  08/16/16
+ * 
  * 
  */
  
@@ -36,6 +46,10 @@
 
 EEPROM_FUNCTIONS eeprom;
 /*---------------------------------------------global variables-------------------------------------*/
+//do we display eight forcasts or one forecast?  Comment out one of the two lines below.
+boolean allForecasts = 0;   //display only today's forecast
+//boolean allForecasts = 1;   //display all eight forecastss 
+
 //opcodes
 #define WREN  6  //Write Enable
 #define WRDI  4  //Write Disable
@@ -130,7 +144,8 @@ void getWeatherFromESP(){
   // let's get some weather data from the ESP
 
   // Get and store Location and Time and Date
-  weatherData = "weatherunderground.com -- Current Weather at " + getData() + ", ";  //gets location
+//  weatherData = "weatherunderground.com -- Current Weather at " + getData() + ", ";  //gets location
+  weatherData = "Current Weather at " + getData() + ", ";  //gets location
   weatherData += getData() + ": ";                           //adds time and data
   messageLength = weatherData.length();
   noOfChars += messageLength;
@@ -142,16 +157,20 @@ void getWeatherFromESP(){
   messageLength = weatherData.length();
   noOfChars += messageLength;
   writeToSerialEEPROM(weatherData, messageLength); 
-  
-  
+    
   // Get and store temperature
   weatherData = "Temperature: " + getData() + "F *** ";
   messageLength = weatherData.length();
   noOfChars += messageLength;
-  writeToSerialEEPROM(weatherData, messageLength);       
-  
-  // Get and store relative humidify
+  writeToSerialEEPROM(weatherData, messageLength);   
 
+  // Get and store feels like temperature
+  weatherData = "Feels Like: " + getData() + "F *** ";
+  messageLength = weatherData.length();
+  noOfChars += messageLength;
+  writeToSerialEEPROM(weatherData, messageLength);   
+    
+  // Get and store relative humidify
   weatherData = "RH: " + getData() + " *** ";
   messageLength = weatherData.length();
   noOfChars += messageLength;
@@ -182,20 +201,44 @@ void getWeatherFromESP(){
 
   // Forecasts:
   
-  // Get and store todeay's forecast
+  // Get and store Period 1 Forecast
   forcastDay = getData(); //not used
   delay(100);
   forcastValue = getData();
-  weatherData = "Forecast: " + forcastValue + " *** ";
+  weatherData = " Forecast for today: " + forcastValue + " *** ";
   messageLength = weatherData.length();
   noOfChars += messageLength;
-  writeToSerialEEPROM(weatherData, messageLength);  
-
-  // To remain in sych with ESP12, get the other seven forcasts
-  // but don't use 
-  for (i = 0; i < 14; i++){
-    getData();
+  writeToSerialEEPROM(weatherData, messageLength);   
+  
+  if (allForecasts){    //if true, store the additional seven forecasts
+    // Get and store Period 2 Forecast
+    forcastDay = getData(); //not used
     delay(100);
+    forcastValue = getData();
+    weatherData = " Forecast for tonight: " + forcastValue + " *** ";
+    messageLength = weatherData.length();
+    noOfChars += messageLength;
+    writeToSerialEEPROM(weatherData, messageLength); 
+   
+    // Get and store Period 3 through Period 8 Forecasts
+    for (i = 0; i < 6; i++){
+      forcastDay = getData();
+      delay(100);
+      forcastValue = getData();
+      weatherData = " Forecast for " + forcastDay + ": " + forcastValue + " *** ";
+      messageLength = weatherData.length();
+      noOfChars += messageLength;
+      writeToSerialEEPROM(weatherData, messageLength); 
+    }
+  }
+
+  else{           //if allForecasts false, display only today's forcast
+    // To remain in sych with ESP12, get the other seven forcasts
+    // but don't use 
+    for (i = 0; i < 14; i++){
+      getData();
+      delay(100);
+    }    
   }
 
   // Enable Interrupt from MISO_ESP
