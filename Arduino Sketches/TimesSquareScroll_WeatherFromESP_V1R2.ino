@@ -1,4 +1,4 @@
-/*  TimesSquareScroll_WeatherFromESP_V1R1.ino
+/*  TimesSquareScroll_WeatherFromESP_V1R2.ino
  *   
  * thepiandi@blogspot.com  MJL 
  * 
@@ -38,7 +38,8 @@
  * Versision 1: 
  *  Revision 1:  08/16/16
  * 
- * 
+ *  Revision 2:  09/07/16
+ *    If "Feels Like" = "Temperature", "Feels Like" will not display
  */
  
 #include <avr/io.h>
@@ -129,7 +130,7 @@ String getData(){
 void getWeatherFromESP(){
   int i;
   byte val;
-  String weatherData;
+  String weatherData, temperature, feelsLike;
   int messageLength;
   String forcastDay, forcastValue;
 
@@ -159,16 +160,20 @@ void getWeatherFromESP(){
   writeToSerialEEPROM(weatherData, messageLength); 
     
   // Get and store temperature
-  weatherData = "Temperature: " + getData() + "F *** ";
+  temperature = getData();
+  weatherData = "Temperature: " + temperature + "F *** ";
   messageLength = weatherData.length();
   noOfChars += messageLength;
   writeToSerialEEPROM(weatherData, messageLength);   
 
   // Get and store feels like temperature
-  weatherData = "Feels Like: " + getData() + "F *** ";
-  messageLength = weatherData.length();
-  noOfChars += messageLength;
-  writeToSerialEEPROM(weatherData, messageLength);   
+  feelsLike = getData();
+  if (feelsLike != temperature){
+    weatherData = "Feels Like: " + feelsLike + "F *** ";
+    messageLength = weatherData.length();
+    noOfChars += messageLength;
+    writeToSerialEEPROM(weatherData, messageLength);
+  }   
     
   // Get and store relative humidify
   weatherData = "RH: " + getData() + " *** ";
