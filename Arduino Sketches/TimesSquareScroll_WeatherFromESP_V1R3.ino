@@ -1,4 +1,4 @@
-/*  TimesSquareScroll_WeatherFromESP_V1R2.ino
+/*  TimesSquareScroll_WeatherFromESP_V1R3.ino
  *   
  * thepiandi@blogspot.com  MJL 
  * 
@@ -40,6 +40,9 @@
  * 
  *  Revision 2:  09/07/16
  *    If "Feels Like" = "Temperature", "Feels Like" will not display
+ *    
+ *  Revision 3:  011/14/16
+ *    Chnnge to "Feels Like" so won't display if it is within 1 deg of temperature either way
  */
  
 #include <avr/io.h>
@@ -168,7 +171,7 @@ void getWeatherFromESP(){
 
   // Get and store feels like temperature
   feelsLike = getData();
-  if (feelsLike != temperature){
+  if (abs(feelsLike.toFloat() - temperature.toFloat()) > 1.0){
     weatherData = "Feels Like: " + feelsLike + "F *** ";
     messageLength = weatherData.length();
     noOfChars += messageLength;

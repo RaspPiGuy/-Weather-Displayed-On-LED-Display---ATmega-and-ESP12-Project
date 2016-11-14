@@ -1,4 +1,4 @@
-/* ESP_toATmega_ForDisplay_V1R6.ino
+/* ESP_toATmega_ForDisplay_V1R7.ino
  *  
  * thepiandi@blogspot.com  MJL
  * 
@@ -26,18 +26,21 @@
  *  
  *  Revision 6: 08/16/2016
  *    Added "Feels Like" temperature
+ *    
+ *  Revision 7: 11/12/2016
+ *    Changed parseDataFromHost() to account for missing data
  */
 
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
-const char* ssid     = "Your Router";
-const char* password = "Router Password";
+const char* ssid     = "squark741";
+const char* password = "=5Qu@29xwa<EKP2%";
 
 const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
-String myKey = "Your Weather Underground Key";
+String myKey = "641be012e48f46b8";
 //String station = "KNCCHAPE70"; // Chapel Hill, Morehead
 //String station = "KNCCHAPE18"; // Briar Chapel
 String station = "KNCPITTS5"; // Sortova Farm
@@ -78,13 +81,16 @@ void ISO_SCK(){
 
 /* ------------------------- parseDataFromHost ------------------- */
 String parseDataFromHost(const char* dataFind, int indexOffset, const char* endOfData){
-  int index;
+  int startIndex, endIndex;
   
-  index = dataFromHost.indexOf(dataFind);
-  dataFromHost.remove(0, index + indexOffset);
-  index = dataFromHost.indexOf(endOfData);
-
-  return dataFromHost.substring(0, index);  
+  startIndex = dataFromHost.indexOf(dataFind);
+  if (startIndex != -1){
+    endIndex = dataFromHost.indexOf(endOfData, (startIndex + indexOffset));
+    return dataFromHost.substring((startIndex + indexOffset), endIndex);
+  }
+  else{
+    return String("NoData");
+  }
 }
 
 /* --------------------- transmitData ----------------------------*/
