@@ -34,13 +34,13 @@
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
-const char* ssid     = "squark741";
-const char* password = "=5Qu@29xwa<EKP2%";
+const char* ssid     = "Your SSID";
+const char* password = "Your Router Password";
 
 const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
-String myKey = "641be012e48f46b8";
+String myKey = "Get Your Key From Weadher Underground API";
 //String station = "KNCCHAPE70"; // Chapel Hill, Morehead
 //String station = "KNCCHAPE18"; // Briar Chapel
 String station = "KNCPITTS5"; // Sortova Farm
