@@ -1,4 +1,4 @@
-/*  TimesSquareScroll_WeatherFromESP_V1R3.ino
+/*  TimesSquareScroll_WeatherFromESP_V1R4.ino
  *   
  * thepiandi@blogspot.com  MJL 
  * 
@@ -33,7 +33,7 @@
  *  If variable "allForecasts" is false, sketch displays current conditions and
  *  forecast for today only.  Comment out one of the two choices,
  *  
- * Also added Heat Index as "Feels Like" temperature  
+ * Also added Heat Index and Wind Chill as "Feels Like" temperature  
  * 
  * Versision 1: 
  *  Revision 1:  08/16/16
@@ -41,8 +41,13 @@
  *  Revision 2:  09/07/16
  *    If "Feels Like" = "Temperature", "Feels Like" will not display
  *    
- *  Revision 3:  011/14/16
- *    Chnnge to "Feels Like" so won't display if it is within 1 deg of temperature either way
+ *  Revision 3:  11/14/16
+ *    Chnnged "Feels Like" so it won't display if it is within 1 deg of temperature either way
+ *    
+ *  Revision 4:  04/27/17
+ *    Chnnged "Forcast for today" to "Forcast" if allForcasts is 0
+ *    Rainfall will only display if precipitation is greater than 0.0. 
+ *    Added delay before enabling interupt on MISO_ESP to avoid initial partial data
  */
  
 #include <avr/io.h>
@@ -199,13 +204,12 @@ void getWeatherFromESP(){
 
   // Get and store precipitation
   weatherData = getData();         //precipitation
-  if (weatherData == ""){
-     weatherData = "0";
+  if (weatherData.toFloat() > 0.0){
+    weatherData = "Rainfall: " + weatherData + "\" *** ";
+    messageLength = weatherData.length();
+    noOfChars += messageLength;
+    writeToSerialEEPROM(weatherData, messageLength); 
   }
-  weatherData = "Rainfall: " + weatherData + "\" *** ";
-  messageLength = weatherData.length();
-  noOfChars += messageLength;
-  writeToSerialEEPROM(weatherData, messageLength); 
 
   // Forecasts:
   
@@ -213,7 +217,13 @@ void getWeatherFromESP(){
   forcastDay = getData(); //not used
   delay(100);
   forcastValue = getData();
-  weatherData = " Forecast for today: " + forcastValue + " *** ";
+  if (allForecasts){
+    weatherData = " Forecast for today: " + forcastValue + " *** ";
+  }
+  else{
+    weatherData = " Forecast: " + forcastValue + " *** ";    
+  }
+    
   messageLength = weatherData.length();
   noOfChars += messageLength;
   writeToSerialEEPROM(weatherData, messageLength);   
@@ -561,6 +571,9 @@ void setup() {
   // Write Inialitizing Message To Display
   noOfChars = initialMessage.length();
   writeToSerialEEPROM(initialMessage, noOfChars);   
+
+  delay(230);  //to account for MISO_ESP going high to low after power up
+  // this prevents incomplete data at first display
   
   // Enable Interrupt from MISO_ESP
   PCICR = 0b00000010;   //to enable interrupt on port C

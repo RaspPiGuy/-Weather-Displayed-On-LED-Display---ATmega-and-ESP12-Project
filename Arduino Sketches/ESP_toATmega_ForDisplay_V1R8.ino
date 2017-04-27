@@ -1,4 +1,4 @@
-/* ESP_toATmega_ForDisplay_V1R7.ino
+/* ESP_toATmega_ForDisplay_V1R8.ino
  *  
  * thepiandi@blogspot.com  MJL
  * 
@@ -29,24 +29,32 @@
  *    
  *  Revision 7: 11/12/2016
  *    Changed parseDataFromHost() to account for missing data
+ *    
+ *  Revision 8: 04/27/2017
+ *    Corrected getForecast().  After changing parseDataFromHost() at last 
+ *      revision, found that all eight forecasts (periods and forecasts) 
+ *      were identical.  This revision fixed that problem.
  */
 
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
 const char* ssid     = "Your SSID";
-const char* password = "Your Router Password";
+const char* password = "Your Password";
 
 const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
-String myKey = "Get Your Key From Weadher Underground API";
+String myKey = "Get Your Key From Weather Underground API";
+
 //String station = "KNCCHAPE70"; // Chapel Hill, Morehead
 //String station = "KNCCHAPE18"; // Briar Chapel
 String station = "KNCPITTS5"; // Sortova Farm
+//String station = "KNCPITTS1"; // Jordan Lake
 //String station = "INCPITTS2"; // Log Barn Road
 //String location = "Log Barn Road";
 String location = "Sortova Farm";
+//String location = "Jordan Lake";
 
 WiFiClient client;  //make an instance of WiFiClient
 
@@ -80,10 +88,10 @@ void ISO_SCK(){
 }
 
 /* ------------------------- parseDataFromHost ------------------- */
-String parseDataFromHost(const char* dataFind, int indexOffset, const char* endOfData){
+String parseDataFromHost(const char* dataFind, int indexOffset, const char* endOfData, int firstIndex = 0){
   int startIndex, endIndex;
   
-  startIndex = dataFromHost.indexOf(dataFind);
+  startIndex = dataFromHost.indexOf(dataFind, firstIndex);
   if (startIndex != -1){
     endIndex = dataFromHost.indexOf(endOfData, (startIndex + indexOffset));
     return dataFromHost.substring((startIndex + indexOffset), endIndex);
@@ -112,7 +120,7 @@ void transmitData(String transmitData){
 // low, then for eight clock pulses from listener.  MISO is altered
 // according to the data when SS goes low and when SCK goes low
 
-// If all the bytes are not sent within 9.5 minutes, the we exit
+// If all the bytes are not sent within 9.5 minutes, then we exit
 // this prevents a hangup if the ATmega328P does not respond to the
 // interrupt
 
@@ -288,10 +296,12 @@ void getCurrentConditions(){
 }
 /* --------------------get Forecast--------------------*/
 void getForecast(){
+  int index;
   delay(2000);
   
   //  Make TCP/IP connection to Weather Underground API
   if(!client.connect(host, httpPort)){
+    
     period_1 = "Could Not Connect";
     forecast_1 = "Could Not Connect";
     period_2 = "Could Not Connect";
@@ -330,22 +340,30 @@ void getForecast(){
     //Serial.print(dataFromHost);
 
     // Get Forecasts--------------------*/   
-    period_1 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_1 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_2 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_2 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_3 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_3 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_4 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_4 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_5 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_5 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_6 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_6 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_7 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_7 = parseDataFromHost("fcttext\":", 10, "\"");
-    period_8 = parseDataFromHost("title\":", 8,  "\"");
-    forecast_8 = parseDataFromHost("fcttext\":", 10, "\"");
+    index = dataFromHost.indexOf("period\":0");
+    period_1 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_1 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":1");
+    period_2 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_2 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":2");
+    period_3 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_3 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":3");
+    period_4 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_4 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":4");
+    period_5 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_5 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":5");
+    period_6 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_6 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":6");
+    period_7 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_7 = parseDataFromHost("fcttext\":", 10, "\"", index);
+    index = dataFromHost.indexOf("period\":7");
+    period_8 = parseDataFromHost("title\":", 8,  "\"", index);
+    forecast_8 = parseDataFromHost("fcttext\":", 10, "\"", index);
 
   }
   else{
