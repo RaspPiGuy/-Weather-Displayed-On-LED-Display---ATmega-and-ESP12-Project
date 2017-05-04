@@ -34,18 +34,27 @@
  *    Corrected getForecast().  After changing parseDataFromHost() at last 
  *      revision, found that all eight forecasts (periods and forecasts) 
  *      were identical.  This revision fixed that problem.
+ *      
+ *  Version 2:
+ *  Revision 1: 05/04/2017
+ *    A new update now occurs in sync with the 10 minute tick of the clock.
+ *      Added uptateTime() which connects to google.com to get current time.
+ *      We use the units digit of current minutes and current seconds to 
+ *      calculate how many seconds to the next 10 minutes of time.  This
+ *      is used as a delay between updates.  Thanks to Daniel Eichhorn for
+ *      the method
  */
 
 #include <ESP8266WiFi.h>
 
 /* ---------------------Global definations ------------------------- */
-const char* ssid     = "Your SSID";
-const char* password = "Your Password";
+const char* ssid     = "squark741";
+const char* password = "=5Qu@29xwa<EKP2%";
 
 const char* host = "api.wunderground.com";  //weather underground API IP address
 const int httpPort = 80;
 
-String myKey = "Get Your Key From Weather Underground API";
+String myKey = "641be012e48f46b8";
 
 //String station = "KNCCHAPE70"; // Chapel Hill, Morehead
 //String station = "KNCCHAPE18"; // Briar Chapel
@@ -77,6 +86,7 @@ String pressureTrend = "ND";
 
 unsigned long startTime;
 
+int secondsToGo;
 
 /* -------------------- the two ISR routines -----------------------*/
 void ISO_SS(){
@@ -99,6 +109,59 @@ String parseDataFromHost(const char* dataFind, int indexOffset, const char* endO
   else{
     return String("NoData");
   }
+}
+
+/* ---------------------------updateTime ------------------------- */
+//calculates the number of seconds to delay to get weather on the 
+//10 minute mark
+
+//connects to google.com server to get the date/time.  Uses the
+//units digit of minutes and the seconds to calculate a delay
+//to get to the next 10 minute mark.  That figure updates secondsToGo
+//returns true only if connection is made and all works
+boolean updateTime() {
+  boolean success = false;
+  String line;
+  int repeatCounter = 0;
+  const int httpPort = 80;
+  int minutes;
+  int seconds;
+  
+  if (!client.connect("www.google.com", httpPort)) {
+    return success;
+  }
+  
+  // This will send the request to the server
+  client.print(String("GET / HTTP/1.1\r\n") +
+               String("Host: www.google.com\r\n") + 
+               String("Connection: close\r\n\r\n"));
+               
+  while(!client.available() && repeatCounter < 10) {
+    delay(1000); 
+    repeatCounter++;
+  }
+
+  client.setNoDelay(false);
+  if((client.available()) > 0) {
+    line = client.readStringUntil('\n');
+    if (line.indexOf("HTTP/1.1 200 OK") != -1){
+      while((client.available()) > 0){
+        line = client.readStringUntil('\n');
+        if (line.startsWith("Date: ")) {
+          minutes = line.substring(27, 28).toInt();
+          seconds = line.substring(29, 31).toInt();          
+          secondsToGo = 600 - (60 * minutes + seconds);
+          success = true;
+          break;
+        }
+      }
+    }
+  }
+  //We have only read a fraction of data available so
+  //connection remains open.  Cannot open WeatherUnderground
+  //connectiion with Google connection open.  Hence next line
+  client.stop();
+  return success;
 }
 
 /* --------------------- transmitData ----------------------------*/
@@ -456,8 +519,18 @@ void loop() {
   transmitData(period_8);
   transmitData(forecast_8);
 
-  do{
-    delay(1000);      
-  }while ((millis() - startTime) < 600000);
+  //creates delay to get to next 10 minute mark
+
+  if (updateTime()){
+    delay(secondsToGo * 1000);
+  }
+
+  //if updateTime() is unsuccessful use brute force delay
+  else{
+    do{
+      delay(1000);      
+    }while ((millis() - startTime) < 600000);
+    
+  }
   
 }
